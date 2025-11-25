@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: #ffffff;
+    color: #0f52BA;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    max-height: 500px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #0f52BA 0%, #73C2FB 100%);
+    color: #ffffff;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.95;
+}
+
+
+/* Portfolio Grid */
+.portfolio-section {
+    padding: 80px 20px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(15, 82, 186, 0.20);
+}
+
+.portfolio-image {
+    width:  2408px;
+    height: 3508px;
+    overflow: hidden;
+    background: #73C2FB;
+}
+
+/* Portfolio Card */
+.portfolio-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(15, 82, 186, 0.12);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(15, 82, 186, 0.1);
+    display: flex;
+    flex-direction: row; 
+    align-items: stretch; 
+}
+
+.portfolio-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(15, 82, 186, 0.20);
+}
+
+.portfolio-image {
+    /* position: sticky; */
+    width: 40%;  /* ***กำหนดความกว้างให้รูปภาพ*** */
+    height: auto; /* ***ให้ยืดตามเนื้อหา*** */
+    overflow: hidden;
+    background: #73C2FB;
+}
+
+.portfolio-image img {
+    width: 350px;
+    height: 500px;
+    object-fit: cover; 
+    transition: transform 0.5s ease;
+}
+
+/* ... (โค้ด hover อื่น ๆ) ... */
+
+.portfolio-content {
+    width: 60%; /* ***กำหนดความกว้างให้ส่วนเนื้อหา*** */
+    padding: 24px;
+}
+/* ... (ส่วนที่เหลือของโค้ด) ... */
+
+.portfolio-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #0f52BA;
+    margin-bottom: 12px;
+    
+    /* ***การแก้ไขเพื่อให้ข้อความไม่ตัดคำ*** */
+    white-space: nowrap; 
+}
+
+/* Footer */
+footer {
+    background: #0f52BA;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 80px;
+}
+
+
+/* Navigation Menu */
+.nav-menu {
+    /* คุณสมบัติหลักที่ทำให้เมนูติดอยู่กับด้านบน */
+    position: fixed;
+
+    /* กำหนดให้ติดอยู่ขอบด้านบนของหน้าจอ */
+    top: 0;
+
+    /* ทำให้กว้างเต็มหน้าจอ */
+    width: 100%;
+
+    /* (Optional)  z-index ให้เมนูอยู่เหนือองค์ประกอบอื่น ๆ ถ้ามันทับกัน */
+    z-index: 1000; 
+
+    background-color: white; 
+    /* สีพื้นหลังปุ่มเว็บไซต์ */
+
+    border-bottom: 2px solid rgba(15, 82, 186, 0.1);
+    padding: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(15, 82, 186, 0.08);
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 0;
+    justify-content: center;
+}
+
+.nav-button {
+    padding: 20px 40px;
+    color: #0f52BA;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+    position: relative;
+}
+
+.nav-button:hover {
+    background: rgba(115, 194, 251, 0.1);
+    color: #0f52BA;
+}
